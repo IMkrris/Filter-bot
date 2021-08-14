@@ -26,10 +26,10 @@ I'm Filter Manager Bot Maintained By [{}](https://t.me/{}).
 """
 
 HELP_STRINGS = """
-Hello! my name is *{}*.
+உங்கள் குழுக்களை நிர்வகிக்க உங்களுக்கு உதவ இங்கே இருக்கிறேன்!
 
-*Main Available Commands* are Below:
-
+எனது முழு திறனுக்கும் என்னை எவ்வாறு பயன்படுத்துவது என்பது பற்றி மேலும் அறிய கீழே உள்ள
+ 🚨HELP🚨 Button யை அழுத்தவும்...
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nഈ പറഞ്ഞിരിക്കുന്ന commandകൾ എല്ലാം  / അല്ലെങ്കിൽ ! വെച്ച് ഉപയോഗിക്കാവുന്നതാണ്...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -127,13 +127,11 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(DEVIL_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="📞Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text=" 👥 channel.",url="https://telegram.dog/Mai_bOTs")],  
-                                                [InlineKeyboardButton(text="Creater",url="https://t.me/No_OnE_Kn0wS_Me"),InlineKeyboardButton(text="Mai Source",url="https://github.com/No-OnE-Kn0wS-Me/Filterbot")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
-    else:
-         
+                                                [[InlineKeyboardButton(text="🚨Help🚨",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text="ℹ️aboutℹ️.",url=""t.me/{}?start=about".format(bot.username)],  
+                                                [InlineKeyboardButton(text="📢Update Channel 📢",url="https://t.me/TN_Bots"),InlineKeyboardButton(text="👥Support 👥",url="https://t.me/tn_support")]])
+                                                [InlineKeyboardButton(text="❓ Help",url="t.me/TamiliniBot?startgroup".format(bot.username)),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN) 
 
-        update.effective_message.reply_text("Heya, How can I help you? 🙂",reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="❓ Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text=" Mai Repo",url="https://github.com/No-OnE-Kn0wS-Me/Filterbot")]]))
+        
                                   
 # for test purposes
 def error_callback(bot, update, error):
