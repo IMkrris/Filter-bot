@@ -127,9 +127,8 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(DEVIL_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="🚨Help🚨",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text="ℹ️aboutℹ️.",url=""t.me/{}?start=about".format(bot.username)],  
-                                                [InlineKeyboardButton(text="📢Update Channel 📢",url="https://t.me/TN_Bots"),InlineKeyboardButton(text="👥Support 👥",url="https://t.me/tn_support")]])
-                                                [InlineKeyboardButton(text="❓ Help",url="t.me/TamiliniBot?startgroup".format(bot.username)),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN) 
+                                                [[InlineKeyboardButton(text="📞Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text=" 👥 channel.",url="https://telegram.dog/Mai_bOTs")],     [InlineKeyboardButton(text="📢Update Channel 📢",url="https://t.me/TN_Bots"),InlineKeyboardButton(text="👥Support 👥",url="https://t.me/tn_support")]])
+                                                [InlineKeyboardButton(text="➕Add your Channel ➕",url="t.me/TamiliniBot?startgroup".format(bot.username)),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN) 
 
         
                                   
